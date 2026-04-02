@@ -6,7 +6,7 @@
 #include <iostream>
 #include "SDL2/SDL.h"
 #include "SDL2_mixer/SDL_mixer.h"
-#include "SDL2_ttf/SDL_ttf.h"
+#include "SDL2/SDL_ttf.h"
 #include "Sprite.h"
 #include "TextureLoader.h"
 #include "UnitEnemy.h"

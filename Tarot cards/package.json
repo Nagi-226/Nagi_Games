@@ -1,0 +1,24 @@
+{
+  "name": "tarot-cards",
+  "version": "1.0.0",
+  "description": "Complete Tarot Card Reading Application with 78 cards",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm start",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "test": "cd server && npm test && cd ../client && npm test",
+    "test:coverage": "cd server && npm run test:coverage && cd ../client && npm run test:coverage",
+    "package": "npm run build && node scripts/package.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
