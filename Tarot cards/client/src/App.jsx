@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Reading from './pages/Reading';
-import History from './pages/History';
-import CardLibrary from './pages/CardLibrary';
+import Navbar from './components/Navbar.jsx';
+import Home from './pages/Home.jsx';
+import Reading from './pages/Reading.jsx';
+import History from './pages/History.jsx';
+import CardLibrary from './pages/CardLibrary.jsx';
 import './App.css';
 
 function App() {
