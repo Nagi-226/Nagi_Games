@@ -19,6 +19,15 @@ router.get('/', (req, res) => {
   }
 });
 
+router.get('/search/:query', (req, res) => {
+  try {
+    const cards = cardService.searchCards(req.params.query);
+    res.json(cards);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 router.get('/:id', (req, res) => {
   try {
     const card = cardService.getCardById(parseInt(req.params.id));
@@ -26,15 +35,6 @@ router.get('/:id', (req, res) => {
       return res.status(404).json({ error: 'Card not found' });
     }
     res.json(card);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-router.get('/search/:query', (req, res) => {
-  try {
-    const cards = cardService.searchCards(req.params.query);
-    res.json(cards);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
